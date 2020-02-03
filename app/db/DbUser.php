@@ -77,7 +77,7 @@ class DbUser extends Dbh
      * Initialize tables.
      * Would NOT normally do this within a website app. It would be a separate application.
      *
-     * Manually create a database; name it 'gratis' or give it
+     * Manually create a database; name it 'gratis-dhenning' or give it
      * a name you prefer and update the 'app/db/Dbh.php' file here: $this->dbname    = "gratis-dhenning";
      * SQL: create database gratis;
      */
