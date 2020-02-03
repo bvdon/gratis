@@ -2,7 +2,7 @@
       - rename both to .htaccess
 
 2) Create a database as 'gratis_dhenning'
-    - create database gratis_dhenning;
+    SQL COMMAND: create database gratis_dhenning;
 
 3) Open browser and go to http://localhost:<port>/index.php
 
