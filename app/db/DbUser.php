@@ -38,7 +38,7 @@ class DbUser extends Dbh
     }
 
     public function getVehicles() {
-        $this->sql = $this->connect()->query("select autoId,make,model,year,miles,newused,price from vehicles order by autoId");
+        $this->sql = $this->connect()->query("select autoId,make,model,year,miles,newused,price from vehicles order by autoId LIMIT 8");
         while ($this->row = $this->sql->fetch()) {
             $this->item_arr = [
                 'autoId'    => $this->row['autoId'],
