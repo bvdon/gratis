@@ -55,7 +55,7 @@ class DbUser extends Dbh
     }
 
     public function getVehicle($autoId=9) {
-        if (!is_int($autoId)) {
+        if (!is_numeric($autoId)) {
             $autoId = 9;
         }
         $this->sql = $this->connect()->query("select count(*) from vehicles where autoId = ".$autoId."");
