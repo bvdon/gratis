@@ -20,7 +20,7 @@ class LoginController extends Controller
     public function authLogin() {
         $this->validLogin = $this->LoginModel->getLoginForm();
 
-       // login success, render a new view with cars if valid login
+        // login success, render a new view with cars if valid login
         if ($this->validLogin['valid'] === 1) {
             $this->view('inventory/index', $this->InventoryModel->getVehiclesData());
         }
@@ -28,7 +28,6 @@ class LoginController extends Controller
             // failed login attempt, render a login form, pre-fill the username
             $this->view('login/index', ['errorMessage'=>'Login Error', 'formName' => $this->LoginModel->loginUsername]);
         }
-     }
+    }
 
 }
-

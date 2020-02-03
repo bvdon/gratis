@@ -3,8 +3,10 @@
 // spl_autoload_register, get path to class files
 require_once 'app/autoload/MyAutoload.php';
 
+
+
 class Init {
-    // this class only exists to pre-load the database.
+
     public $DBobject;
 
     public function __construct() {
@@ -18,7 +20,6 @@ class Init {
         $this->DBobject->createVehiclesTable();
     }
 }
-
 // bootstrap
 $init = new Init();
 $init->initDB();
