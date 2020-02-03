@@ -14,7 +14,7 @@
 <div class="container">
 
 
-    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Long of Chattagnooga</h1>
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Long of Chattanooga</h1>
     <h3 class="font-weight-light text-center text-lg-left mt-4 mb-0">Vehicle Details</h3>
 
     <hr class="mt-2 mb-5">
