@@ -56,6 +56,7 @@ insert into vehicles (make, model, year, miles, newused, price) values ('Audi', 
 insert into vehicles (make, model, year, miles, newused, price) values ('Mercedes-Benz', 'GLA', '2017', '42k', 'Used', '$29,500');
 insert into vehicles (make, model, year, miles, newused, price) values ('Mercedes-Benz', 'SL-Class', '2007', '42k', 'Used', '$21,900');
 insert into vehicles (make, model, year, miles, newused, price) values ('Mercedes-Benz', 'GLE', '2019', '0k', 'New', '$80,775');
+insert into vehicles(make, model, year, miles, newused, price) VALUES ('Bad Request', '404', '--', '--', '--', '$0');
 
 
 */
