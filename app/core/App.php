@@ -6,7 +6,7 @@
  *
  * Array ( [0] =>  [1] => login [2] => display [3] => param )
  *
- * Corresponding to this URL:
+ * corresponding to this URL
  * http://localhost/login/display/optionalparam
  *
  * 'login' is the controller name, 'display' is the method name, and the remaining elements are zero or more params.
@@ -19,7 +19,6 @@ class App
     protected $method       = '';
     protected $params       = [];
     protected $routes       = "";
-    protected $bad_request  = false;
 
     public function __construct() {
 
@@ -51,7 +50,6 @@ class App
         }
         else {
             // the method does not exist, so we need to default to login.
-            $this->bad_request = true;
             $this->method = "display";
             $this->controller = 'LoginController';
             require_once 'app/controllers/LoginController.php';
@@ -59,14 +57,8 @@ class App
         }
         unset($this->routes[2]);
 
-        if ($this->bad_request) {
-            // 404 error, display login
-            $this->params =  ['errorMessage'=>'Bad Request, signed out.'];
-         }
-        else {
-            // remaining elements of the array are param list, default is no params
-            $this->params =  $this->routes ? array_values($this->routes) : [];
-        }
+         // remaining elements of the array are param list, default is no params
+        $this->params =  $this->routes ? array_values($this->routes) : [];
 
         /*
         //calls class::method(params);
