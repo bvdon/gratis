@@ -36,7 +36,7 @@
 <body>
 
 
-<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Long of Chattagnooga</h1>
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Long of Chattanooga</h1>
 <h3 class="font-weight-light text-center text-lg-left mt-4 mb-0">Welcome!</h3>
 <div class="login-form">
     <BR><p class="text-danger h4"><?=$data['errorMessage']?></p>
