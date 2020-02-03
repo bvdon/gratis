@@ -29,7 +29,7 @@
     </div>
 
     <div class="text-center">
-        <BR><BR><BR><a href="/index.php"><button type="button" class="btn btn-info">Sign Out</button></a>
+        <BR><BR><a href="http://localhost/inventory/display"><button type="button" class="btn btn-success">Back to Inventory</button></a> <BR><BR><BR><BR><a href="/index.php"><button type="button" class="btn btn-info">Sign Out</button></a>
     </div>
 
 </div>
