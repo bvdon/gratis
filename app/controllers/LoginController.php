@@ -12,9 +12,9 @@ class LoginController extends Controller
     }
 
     // A bad request will direct you to login page.
-    public function display($data=[]) {
-        $this->view('login/index', ['errorMessage'=>$data, 'formName' => '']);
-     }
+    public function display() {
+        $this->view('login/index', ['errorMessage'=>, 'formName' => '']);
+    }
 
     // Form POST on login accesses this method
     public function authLogin() {
