@@ -152,7 +152,7 @@ class DbUser extends Dbh
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Audi', 'Q7', '2018', '41k', 'Used', '$43,250')",
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'GLA', '2017', '32k', 'Used', '$29,500')",
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'SL-Class', '2007', '42k', 'Used', '$21,900')",
-            "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'GLE', '2019', '0k', 'New', '$80,775')".
+            "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'GLE', '2019', '0k', 'New', '$80,775')",
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Bad Request', '404', '--', '--', '--', '$0')"
         ];
 
