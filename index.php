@@ -9,7 +9,8 @@ require_once 'app/init.php';
 
 
 /*
-
+There are 2 .htaccess files: /dot.htaccess and /app/dot.htaccess
+    rename both to .htaccess
 
 DATABASE:
 create database gratis_dhenning;
