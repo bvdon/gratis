@@ -54,7 +54,7 @@ class DbUser extends Dbh
         return $this->vehicles_arr;
     }
 
-    public function getVehicle($autoId=1) {
+    public function getVehicle($autoId=9) {
         $this->sql = $this->connect()->query("select count(*) from vehicles where autoId = ".$autoId."");
 
         if (!$this->sql->fetchColumn() > 0) {
@@ -83,7 +83,7 @@ class DbUser extends Dbh
      * Initialize tables.
      * Would NOT normally do this within a website app. It would be a separate application.
      *
-     * Manually create a database; name it 'gratis-dhenning' or give it
+     * Manually create a database; name it 'gratis' or give it
      * a name you prefer and update the 'app/db/Dbh.php' file here: $this->dbname    = "gratis-dhenning";
      * SQL: create database gratis;
      */
@@ -149,7 +149,8 @@ class DbUser extends Dbh
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Audi', 'Q7', '2018', '41k', 'Used', '$43,250')",
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'GLA', '2017', '32k', 'Used', '$29,500')",
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'SL-Class', '2007', '42k', 'Used', '$21,900')",
-            "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'GLE', '2019', '0k', 'New', '$80,775')"
+            "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Mercedes-Benz', 'GLE', '2019', '0k', 'New', '$80,775')".
+            "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Bad Request', '404', '--', '--', '--', '$0')"
         ];
 
         foreach ($this->sql_insert_arr as $this->sql_insert) {
