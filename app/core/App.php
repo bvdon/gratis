@@ -33,7 +33,7 @@ class App
         }
         $this->controller = ucFirst($this->routes[1]) . 'Controller';
 
-        // if the controller does not exist, then default controller
+        // if the controller does not exist, then use default controller
         if (!file_exists('app/controllers/' . $this->controller . '.php')) {
             $this->controller = 'LoginController';
         }
