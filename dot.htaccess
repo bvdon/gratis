@@ -7,5 +7,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 
-# this takes any url and redirects as a param $1 to index.php?url, this was we can get that as router data
+# this takes any url and redirects to index.php?<somepath>, this way we can get that as router data
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
