@@ -39,14 +39,14 @@ class App
         }
         unset($this->routes[1]);
 
-        // we now have a valid controller
-        require_once 'app/controllers/' . $this->controller . '.php';
-        $this->controller = new $this->controller;
-
-        // we had to create an instance of the controller to test with method_exists
+        // test if method_exists
         if ((isset($this->routes[2])) && (method_exists($this->controller, $this->routes[2]))) {
             // method named from routes[2] exists, we have a valid method name.
             $this->method = $this->routes[2];
+
+            // we now have a valid controller
+            require_once 'app/controllers/' . $this->controller . '.php';
+            $this->controller = new $this->controller;
         }
         else {
             // the method does not exist, so we need to default to login.
