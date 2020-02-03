@@ -11,16 +11,12 @@ class LoginController extends Controller
         $this->InventoryModel = $this->model('InventoryModel');
     }
 
-    /*
-     * A bad request will direct you to login page.
-     */
-    public function display() {
-        $this->view('login/index', ['errorMessage'=>'', 'formName' => '']);
+    // A bad request will direct you to login page.
+    public function display($data=[]) {
+        $this->view('login/index', ['errorMessage'=>$data, 'formName' => '']);
      }
 
-    /*
-     * Form POST on login accesses this method
-     */
+    // Form POST on login accesses this method
     public function authLogin() {
         $this->validLogin = $this->LoginModel->getLoginForm();
 
