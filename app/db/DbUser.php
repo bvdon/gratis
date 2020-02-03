@@ -55,6 +55,12 @@ class DbUser extends Dbh
     }
 
     public function getVehicle($autoId=1) {
+        $this->sql = $this->connect()->query("select count(*) from vehicles where autoId = ".$autoId."");
+
+        if (!$this->sql->fetchColumn() > 0) {
+            $autoId=1; // invalid autoId, so show the first car.
+        }
+
         $this->sql = $this->connect()->query("select autoId,make,model,year,miles,newused,price from vehicles where autoId=".$autoId." order by autoId" );
         while ($this->row = $this->sql->fetch()) {
             $this->item_arr = [
