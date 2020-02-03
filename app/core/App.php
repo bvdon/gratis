@@ -51,6 +51,7 @@ class App
         else {
             // the method does not exist, so we need to default to login.
             $this->method = "display";
+            $this->controller = 'LoginController';
             require_once 'app/controllers/LoginController.php';
             $this->controller = new $this->controller;
         }
