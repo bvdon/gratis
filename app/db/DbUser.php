@@ -86,9 +86,9 @@ class DbUser extends Dbh
      * Initialize tables.
      * Would NOT normally do this within a website app. It would be a separate application.
      *
-     * Manually create a database; name it 'gratis' or give it
-     * a name you prefer and update the 'app/db/Dbh.php' file here: $this->dbname    = "gratis-dhenning";
-     * SQL: create database gratis;
+     * Manually create a database; name it 'gratis_dhenning' or give it
+     * a name you prefer and update the 'app/db/Dbh.php' file here: $this->dbname    = "gratis_dhenning";
+     * SQL: create database gratis_dhenning;
      */
 
     // check to see if a table exists.
@@ -115,9 +115,7 @@ class DbUser extends Dbh
     }
 
     // insert data into users table
-    public function insertUsersTable() {
-        $this->sql = $this->connect()->query("select count(*) from users");
-
+    private function insertUsersTable() {
         // passwords should ALWAYS be hashed before storing in a database. Not for this app :)
         $this->sql_insert_arr = [
             "INSERT INTO users(username, password) VALUES ('dhenning', 'password')",
@@ -141,9 +139,7 @@ class DbUser extends Dbh
     }
 
     // insert data into vehicles table
-    public function insertVehicleTable() {
-        $this->sql = $this->connect()->query("select count(*) from vehicles");
-
+    private function insertVehicleTable() {
         $this->sql_insert_arr = [
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('BMW', 'X1', '2013', '13k', 'Used', '$10,950')",
             "INSERT INTO vehicles(make, model, year, miles, newused, price) VALUES ('Nisssan', 'Altima', '2017', '34k', 'Used', '$15,750')",
