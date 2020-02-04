@@ -1,6 +1,5 @@
 <?php
 // bootstrap
-require_once 'app/autoload/MyAutoload.php';
 require_once 'app/init.php';
 
 
@@ -23,8 +22,8 @@ create table users (
     password varchar(16) NOT NULL
 );
 
-insert into users (userName, password) values ('dhenning','password');
-insert into users (userName, password) values ('jfletcher','password');
+insert into users (username, password) values ('dhenning','password');
+insert into users (username, password) values ('jfletcher','password');
 
 VEHICLES:
 drop table vehicles;
